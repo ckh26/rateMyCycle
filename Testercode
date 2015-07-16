@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+ 
+$("#good").hide();
+$("#fair").hide();
+$("#poor").hide();
+$("#terrible").hide();
+ 
+$("#greenCircle").mouseenter(function(){
+    $(this).css("background","#8AE65C");
+    $(this).css("color","#000000");
+});
+    
+    $("#greenCircle").mouseleave(function(){
+    $(this).css("background","#C2FFAD");
+    $(this).css("color","#ffffff");
+      });
+    
+$("#yellowCircle").mouseenter(function(){
+    $(this).css("background","#FFCC00");
+    $(this).css("color","#001F4C");
+});
+    
+$("#yellowCircle").mouseleave(function(){
+$(this).css("background","#FFFF66");
+$(this).css("color","#6699FF");
+});
+    
+$("#redCircle").mouseenter(function(){
+    $(this).css("background","#FF5C33");
+    $(this).css("color","#001F4C");
+});
+    
+$("#redCircle").mouseleave(function(){
+$(this).css("background","#FF8080");
+$(this).css("color","white");
+});
+    
+$("#greyCircle").mouseenter(function(){
+    $(this).css("background","black"); 
+    $(this).css("color","#E62E00");
+});
+    
+$("#greyCircle").mouseleave(function(){
+$(this).css("background","grey");
+$(this).css("color","white");
+});
+   
+
+$("#greenCircle").click(function(){
+    $(this).css("text-decoration","underline");
+    $(this).css("color","#000000");
+    $("#good").show();
+});
+
+ $("#greenCircle").mouseleave(function(){
+    $(this).css("background","#C2FFAD");
+    $(this).css("color","#ffffff");
+    $(this).css("text-decoration","none");
+    $(this).css("border-color","white");
+$("#good").hide();
+
+      });
+
+$("#yellowCircle").click(function(){
+    $(this).css("text-decoration","underline");
+    $(this).css("color","#000000");
+    $("#fair").show();
+});
+
+ $("#yellowCircle").mouseleave(function(){
+$(this).css("background","#FFFF66");
+$(this).css("color","#6699FF");
+    $(this).css("text-decoration","none");
+$("#fair").hide();
+      });
+
+$("#redCircle").click(function(){
+    $(this).css("text-decoration","underline");
+    $(this).css("color","#000000");
+    $("#poor").show();
+});
+
+ $("#redCircle").mouseleave(function(){
+$(this).css("background","#FF8080");
+$(this).css("color","white");
+    $(this).css("text-decoration","none");
+$("#poor").hide();
+      });
+
+$("#greyCircle").click(function(){
+    $(this).css("text-decoration","underline");
+    $(this).css("color","#E62E00");
+    $("#terrible").show();
+});
+
+ $("#greyCircle").mouseleave(function(){
+$(this).css("background","#grey");
+$(this).css("color","white");
+    $(this).css("text-decoration","none");
+$("#terrible").hide();
+});
+
+});
+
+</script>
+<style>
+
+h1, h2 {
+text-align: center;
+font-family: 'Josefin Sans', sans-serif;
+}
+
+.faces-container {
+   background-color: #ffffff;
+   margin: auto;   
+   width: 480px;
+height: 400px;
+padding: 30px;
+}
+
+#greenCircle {
+font-size: 32px;
+text-align: center;
+font-family: 'Reenie Beanie', cursive;
+color: white;
+line-height:100px;
+width:100px;
+height:100px;
+background:#C2FFAD;
+float: left;
+border-radius:50%;
+border-style: solid;
+border-color: white;
+border-width: 10px;
+
+}
+
+
+#yellowCircle {
+font-size: 32px;
+text-align: center;
+font-family: 'Reenie Beanie', cursive;
+color: #6699FF;
+line-height:100px;width:100px;
+height:100px;
+background:#FFFF66;
+float: left;
+border-radius:50%;
+border-style: solid;
+border-color: white;
+border-width: 10px;
+}
+
+#redCircle {
+font-size: 32px;
+text-align: center;
+font-family: 'Reenie Beanie', cursive;
+color: white;
+line-height:100px;width:100px;
+height:100px;
+background:#FF8080;
+float: left;
+border-radius:50%;
+border-style: solid;
+border-color: white;
+border-width: 10px;
+}
+
+#greyCircle {
+font-size: 30px;
+text-align: center;
+font-family: 'Reenie Beanie', cursive;
+color: white;
+line-height:100px;width:100px;
+height:100px;
+background:grey;
+float: left;
+border-radius:50%;
+border-style: solid;
+border-color: white;
+border-width: 10px;
+}
+
+.text-container {
+   background-color: #ffffff;
+   margin: auto;   
+   width: 480px;
+padding-top:150px
+}
+
+#good, #fair, #poor, #terrible {
+text-align:center;
+padding-top:10px
+}
+
+p {
+font-family: 'Josefin Sans', sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div class="faces-container">
+<h1>Rate Your Cycle</h1>
+<h2>How was your ride in today?</h2>
+<div id="greenCircle">Good</div>
+
+<div id="yellowCircle">Fair</div>
+<div id="redCircle">Poor</div>
+<div id="greyCircle">Terrible!</div>
+
+
+<div class="text-container">
+<div id="good"><p>Good going, you've got great wheels today! Zoom, zoom!</p></div>
+<div id="fair"><p>Fair play. It's tough sometimes, but when in doubt, pedal it out!</p></div> 
+<div id="poor"><p>I'm sorry to hear that. But remember: you can never be sad when riding a bicycle. Things will get better.</p></div>
+<div id="terrible"><p>Grrr, how annoying! Still, life is like riding a bicycle: to stay balanced you've got to keep moving. Chin up!</p></div>
+</div>
+
+</body>
+</html>
+
